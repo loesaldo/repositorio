@@ -1,0 +1,42 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ServiceCrudS_RegionService WSDL service -->
+
+  <service name="ServiceCrudS_Region" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://sregion.service.org"/>
+      <parameter name="wsdlServiceElement" value="ServiceCrudS_RegionService"/>
+      <parameter name="schemaQualified" value="http://sregion.service.org"/>
+      <parameter name="wsdlServicePort" value="ServiceCrudS_Region"/>
+      <parameter name="className" value="org.service.sregion.ServiceCrudS_RegionSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="ServiceCrudS_Region"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="connectDataBaseOracle" qname="operNS:connectDataBaseOracle" xmlns:operNS="http://sregion.service.org" soapAction="" >
+      </operation>
+      <operation name="consultaIndividualS_Region" qname="operNS:consultaIndividualS_Region" xmlns:operNS="http://sregion.service.org" returnQName="retNS:consultaIndividualS_RegionReturn" xmlns:retNS="http://sregion.service.org" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://sregion.service.org" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="actualizaS_Region" qname="operNS:actualizaS_Region" xmlns:operNS="http://sregion.service.org" returnQName="retNS:actualizaS_RegionReturn" xmlns:retNS="http://sregion.service.org" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://sregion.service.org" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:name" xmlns:pns="http://sregion.service.org" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="agregaS_Region" qname="operNS:agregaS_Region" xmlns:operNS="http://sregion.service.org" returnQName="retNS:agregaS_RegionReturn" xmlns:retNS="http://sregion.service.org" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://sregion.service.org" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:name" xmlns:pns="http://sregion.service.org" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="eliminaS_Region" qname="operNS:eliminaS_Region" xmlns:operNS="http://sregion.service.org" returnQName="retNS:eliminaS_RegionReturn" xmlns:retNS="http://sregion.service.org" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://sregion.service.org" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="connectDataBaseOracle consultaIndividualS_Region actualizaS_Region agregaS_Region eliminaS_Region"/>
+
+  </service>
+</deployment>

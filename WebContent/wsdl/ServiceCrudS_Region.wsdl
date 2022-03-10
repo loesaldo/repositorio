@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://sregion.service.org" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://sregion.service.org" xmlns:intf="http://sregion.service.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://sregion.service.org" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="connectDataBaseOracle">
+    <complexType/>
+   </element>
+   <element name="connectDataBaseOracleResponse">
+    <complexType/>
+   </element>
+   <element name="consultaIndividualS_Region">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="consultaIndividualS_RegionResponse">
+    <complexType>
+     <sequence>
+      <element name="consultaIndividualS_RegionReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="actualizaS_Region">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+      <element name="name" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="actualizaS_RegionResponse">
+    <complexType>
+     <sequence>
+      <element name="actualizaS_RegionReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="agregaS_Region">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+      <element name="name" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="agregaS_RegionResponse">
+    <complexType>
+     <sequence>
+      <element name="agregaS_RegionReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="eliminaS_Region">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="eliminaS_RegionResponse">
+    <complexType>
+     <sequence>
+      <element name="eliminaS_RegionReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="consultaIndividualS_RegionResponse">
+
+      <wsdl:part element="impl:consultaIndividualS_RegionResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="connectDataBaseOracleRequest">
+
+      <wsdl:part element="impl:connectDataBaseOracle" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="agregaS_RegionRequest">
+
+      <wsdl:part element="impl:agregaS_Region" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="eliminaS_RegionResponse">
+
+      <wsdl:part element="impl:eliminaS_RegionResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="actualizaS_RegionResponse">
+
+      <wsdl:part element="impl:actualizaS_RegionResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="eliminaS_RegionRequest">
+
+      <wsdl:part element="impl:eliminaS_Region" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="agregaS_RegionResponse">
+
+      <wsdl:part element="impl:agregaS_RegionResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="actualizaS_RegionRequest">
+
+      <wsdl:part element="impl:actualizaS_Region" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="connectDataBaseOracleResponse">
+
+      <wsdl:part element="impl:connectDataBaseOracleResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="consultaIndividualS_RegionRequest">
+
+      <wsdl:part element="impl:consultaIndividualS_Region" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="ServiceCrudS_Region">
+
+      <wsdl:operation name="connectDataBaseOracle">
+
+         <wsdl:input message="impl:connectDataBaseOracleRequest" name="connectDataBaseOracleRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:connectDataBaseOracleResponse" name="connectDataBaseOracleResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="consultaIndividualS_Region">
+
+         <wsdl:input message="impl:consultaIndividualS_RegionRequest" name="consultaIndividualS_RegionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:consultaIndividualS_RegionResponse" name="consultaIndividualS_RegionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="actualizaS_Region">
+
+         <wsdl:input message="impl:actualizaS_RegionRequest" name="actualizaS_RegionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:actualizaS_RegionResponse" name="actualizaS_RegionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="agregaS_Region">
+
+         <wsdl:input message="impl:agregaS_RegionRequest" name="agregaS_RegionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:agregaS_RegionResponse" name="agregaS_RegionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="eliminaS_Region">
+
+         <wsdl:input message="impl:eliminaS_RegionRequest" name="eliminaS_RegionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:eliminaS_RegionResponse" name="eliminaS_RegionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ServiceCrudS_RegionSoapBinding" type="impl:ServiceCrudS_Region">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="connectDataBaseOracle">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="connectDataBaseOracleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="connectDataBaseOracleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="consultaIndividualS_Region">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="consultaIndividualS_RegionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="consultaIndividualS_RegionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="actualizaS_Region">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="actualizaS_RegionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="actualizaS_RegionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="agregaS_Region">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="agregaS_RegionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="agregaS_RegionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="eliminaS_Region">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="eliminaS_RegionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="eliminaS_RegionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ServiceCrudS_RegionService">
+
+      <wsdl:port binding="impl:ServiceCrudS_RegionSoapBinding" name="ServiceCrudS_Region">
+
+         <wsdlsoap:address location="http://localhost:7575/wss/services/ServiceCrudS_Region"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
